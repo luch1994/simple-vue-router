@@ -1,8 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 import router from './router';
+import Bus from './plugins/bus';
+import Emitter from './plugins/emitter';
 
-Vue.config.productionTip = false
+Vue.use(Bus);
+Vue.use(Emitter);
+
+Vue.config.productionTip = false;
+
 
 new Vue({
   router,
